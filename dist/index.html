@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="myDIV" class="header">
+        <h2 style="margin: 5px">My To Do List</h2>
+        <form action="" id="formAdd">
+          <input
+            type="text"
+            class="myInput"
+            name="myInput"
+            placeholder="Enter your todo here"
+          />
+          <button class="addBtn btn btn-outline-dark add btn-sm">Add</button
+          ><br /><br />
+        </form>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <form action="" id="formUpdate">
+              <input
+                type="text"
+                id="myInput"
+                placeholder="Enter your todo"
+              /><br /><br />
+              <button class="addBtn btn btn-outline-dark btn-sm">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <table id="myUL"></table>
+      <div id="importantId"></div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyAtRVYiZ5nYH3C9UGs6swhV6gxlYEFP8kg",
+        authDomain: "students-app-6674f.firebaseapp.com",
+        projectId: "students-app-6674f",
+        storageBucket: "students-app-6674f.appspot.com",
+        messagingSenderId: "247815212233",
+        appId: "1:247815212233:web:44361e868bc1af9b07d118",
+        measurementId: "G-VYKD3D32QF",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
